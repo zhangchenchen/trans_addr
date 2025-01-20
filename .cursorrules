@@ -1,0 +1,95 @@
+# TransAddr.com 开发规范
+
+format: 
+  javascript:
+    indent: 2
+    quotes: single
+  vue:
+    indent: 2
+    quotes: single
+
+rules:
+  - name: "步骤展示格式"
+    pattern: |
+      步骤 X：[步骤名称]
+      
+      【目标】
+      简述这一步要完成什么
+      
+      【原因】
+      解释为什么要这样做，以及对初学者的帮助
+      
+      【具体操作】
+      详细的操作步骤
+      
+      【验证方式】
+      如何确认这一步完成得正确
+
+  - name: "代码变更规范"
+    rules:
+      - "每次只改动一个文件"
+      - "每个改动都要解释其作用"
+      - "使用注释说明关键代码的功能"
+      - "提供完整的代码片段"
+
+  - name: "文件命名规范"
+    rules:
+      - "组件文件：大驼峰（AddressForm.vue）"
+      - "工具文件：小驼峰（apiService.js）"
+      - "样式文件：中横线（main-style.css）"
+
+  - name: "代码风格"
+    rules:
+      - "使用 ES6+ 语法"
+      - "优先使用 const 和 let"
+      - "每个函数都需要注释"
+
+  - name: "组件编写"
+    rules:
+      - "单一职责原则"
+      - "清晰的 Props 和事件命名"
+      - "使用 setup 语法糖"
+
+  - name: "开发阶段"
+    stages:
+      - name: "初始化"
+        tasks:
+          - "创建项目"
+          - "安装依赖"
+          - "环境配置"
+      
+      - name: "基础界面"
+        tasks:
+          - "页面布局"
+          - "基础样式"
+          - "静态界面"
+      
+      - name: "功能实现"
+        tasks:
+          - "表单交互"
+          - "API 调用"
+          - "错误处理"
+      
+      - name: "优化"
+        tasks:
+          - "界面美化"
+          - "交互优化"
+          - "性能优化"
+
+  - name: "开发节奏"
+    rules:
+      - "每步骤等待确认"
+      - "随时提问"
+      - "理解优先"
+      - "定期回顾"
+
+plugins:
+  - volar
+  - eslint
+  - prettier
+
+settings:
+  editor.formatOnSave: true
+  editor.defaultFormatter: prettier
+  vetur.format.defaultFormatter.html: prettier
+  vetur.format.defaultFormatter.js: prettier 
